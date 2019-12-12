@@ -1,0 +1,10 @@
+﻿using Prism.Events;
+using VMS.TPS.Common.Model.API;
+
+namespace Model_Validation.Events
+{
+    public class PlanSelectedEvent:PubSubEvent<PlanSetup>
+    {
+
+    }
+}
