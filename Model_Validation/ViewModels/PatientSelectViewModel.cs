@@ -69,11 +69,12 @@ namespace Model_Validation.ViewModels
             Courses.Clear();
             //Need to preface any OpenPatient command by ClosePatient (in case a patient is already open - scripting can only open one patient at a time)
             _application.ClosePatient();
-            _patient = _application.OpenPatientById(PatientID);
+            _patient = _application.OpenPatientById(PatientID);            
             if (_patient != null)
             {
+                _eventAggregator.GetEvent<PatientSelectedEvent>().Publish(_patient);
                 //Populating course list for current patient
-                foreach(var course in _patient.Courses)
+                foreach (var course in _patient.Courses)
                 {
                     Courses.Add(course);
                 }

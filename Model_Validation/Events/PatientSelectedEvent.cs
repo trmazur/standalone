@@ -3,7 +3,7 @@ using VMS.TPS.Common.Model.API;
 
 namespace Model_Validation.Events
 {
-    public class PlanSelectedEvent : PubSubEvent<PlanSetup>
+    public class PatientSelectedEvent:PubSubEvent<Patient>
     {
     }
 }

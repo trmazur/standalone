@@ -13,5 +13,6 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <local:PatientSelectView DataContext="{Binding PatientSelectViewModel}"/>
+        <local:EclipseView DataContext="{Binding EclipseViewModel}" Grid.Row="1"/>
     </Grid>
 </Window>

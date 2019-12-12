@@ -9,11 +9,13 @@ namespace Model_Validation.ViewModels
 {
     public class MainViewModel:BindableBase
     {
-        public MainViewModel(PatientSelectViewModel patientSelectViewModel)
+        public MainViewModel(PatientSelectViewModel patientSelectViewModel, EclipseViewModel eclipseViewModel)
         {
             PatientSelectViewModel = patientSelectViewModel;
+            EclipseViewModel = eclipseViewModel;
         }
 
         public PatientSelectViewModel PatientSelectViewModel { get; }
+        public EclipseViewModel EclipseViewModel { get; }
     }
 }
